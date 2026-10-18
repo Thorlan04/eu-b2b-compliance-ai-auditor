@@ -10,12 +10,12 @@
       "editor": "stringList",
       "prefill": [
         "https://www.doctolib.fr",
-        "794588818",
+        "794598813",
         "Mirakl"
       ],
       "default": [
         "https://www.doctolib.fr",
-        "794588818",
+        "794598813",
         "Mirakl"
       ]
     },
@@ -40,24 +40,28 @@
       "title": "Verify Official EU/French Registries",
       "type": "boolean",
       "description": "Query official open government registry (recherche-entreprises.api.gouv.fr) to verify SIREN, SIRET, NAF/APE code, VAT number, and legal executives.",
-      "default": true
+      "default": true,
+      "editor": "checkbox"
     },
     "check_ai_readiness": {
       "title": "Audit AI Search & LLM Engine Readiness (GEO)",
       "type": "boolean",
       "description": "Verify /llms.txt, /llms-full.txt, Schema.org JSON-LD, OpenAPI specs, and robots.txt rules for GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, etc.",
-      "default": true
+      "default": true,
+      "editor": "checkbox"
     },
     "check_gdpr_legal": {
       "title": "Audit GDPR & French Legal Notice Compliance",
       "type": "boolean",
       "description": "Verify mandatory legal notices (Mentions Légales, Host info, publication director, SIRET displayed) and detect third-party trackers.",
-      "default": true
+      "default": true,
+      "editor": "checkbox"
     },
     "gemini_api_key": {
       "title": "Google Gemini API Key (Optional Self-Healing Booster)",
       "type": "string",
       "description": "Optional Gemini API key for advanced self-healing on blocked/obfuscated web pages and personalized AI strategic audit synthesis. If omitted, built-in heuristic rules take over.",
+      "editor": "textfield",
       "isSecret": true
     },
     "max_retries": {
@@ -66,7 +70,8 @@
       "description": "Number of retries when encountering rate limits or slow responses.",
       "default": 2,
       "minimum": 1,
-      "maximum": 5
+      "maximum": 5,
+      "editor": "number"
     },
     "timeout_per_target_seconds": {
       "title": "Timeout per Target (seconds)",
@@ -74,7 +79,8 @@
       "description": "Maximum seconds allowed per target scan before self-healing fallback concludes the report.",
       "default": 30,
       "minimum": 5,
-      "maximum": 120
+      "maximum": 120,
+      "editor": "number"
     }
   },
   "required": [
