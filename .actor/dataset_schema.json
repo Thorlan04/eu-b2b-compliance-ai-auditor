@@ -1,8 +1,6 @@
 {
-  "title": "EU B2B Compliance & AI-Search Dataset Item",
-  "type": "object",
-  "schemaVersion": 1,
-  "properties": {
+  "actorSpecification": 1,
+  "fields": {
     "target_input": {
       "type": "string",
       "description": "Original input target provided by user"
@@ -116,6 +114,52 @@
     "auditor_version": {
       "type": "string",
       "description": "Version of the auditor bot and signature engine"
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "domain",
+          "company_name",
+          "global_compliance_grade",
+          "rgpd_compliance_score",
+          "ai_search_readiness_score",
+          "siren",
+          "vat_number",
+          "public_emails"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "columns": {
+          "domain": {
+            "label": "Domain"
+          },
+          "company_name": {
+            "label": "Company"
+          },
+          "global_compliance_grade": {
+            "label": "Grade"
+          },
+          "rgpd_compliance_score": {
+            "label": "RGPD Score"
+          },
+          "ai_search_readiness_score": {
+            "label": "AI Score"
+          },
+          "siren": {
+            "label": "SIREN"
+          },
+          "vat_number": {
+            "label": "TVA / VAT"
+          },
+          "public_emails": {
+            "label": "Emails"
+          }
+        }
+      }
     }
   }
 }
