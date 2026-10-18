@@ -50,7 +50,7 @@ jobs:
           if git diff --quiet data/ .actor/ src/ README.md; then
             echo "Aucune modification de signature requise cette semaine."
           else
-            git add data/compliance_signatures.json .actor/actor.json src/__init__.py src/main.py README.md
+            git add data/ .actor/ src/ README.md
             git commit -m "chore(auto-update): weekly compliance rules & AI crawlers update"
             git push origin main
             echo "Mise à jour poussée sur GitHub. Rebuild automatique déclenché sur Apify Store !"
