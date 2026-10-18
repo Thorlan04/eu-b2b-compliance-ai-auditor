@@ -14,7 +14,7 @@ Ce guide pas-à-pas vous accompagne de la mise en ligne de votre robot jusqu'à 
    git add .
    git commit -m "feat: initial commit eu-b2b-compliance-ai-auditor v1.0.0"
    git branch -M main
-   git remote add origin https://github.com/VOTRE_NOM_UTILISATEUR/eu-b2b-compliance-ai-auditor.git
+   git remote add origin https://github.com/Thorlan04/eu-b2b-compliance-ai-auditor.git
    git push -u origin main
    ```
 
@@ -25,7 +25,7 @@ Ce guide pas-à-pas vous accompagne de la mise en ligne de votre robot jusqu'à 
 1. Connectez-vous sur [console.apify.com](https://console.apify.com).
 2. Dans le menu de gauche, cliquez sur **Actors** -> bouton **Create new** (en haut à droite).
 3. Choisissez l'option **"Link Git repository"** (ou GitHub).
-4. Sélectionnez votre dépôt : `VOTRE_NOM_UTILISATEUR/eu-b2b-compliance-ai-auditor`.
+4. Sélectionnez votre dépôt : `Thorlan04/eu-b2b-compliance-ai-auditor`.
 5. Apify détecte automatiquement le fichier `.actor/actor.json` et le `Dockerfile`.
 6. Cliquez sur **Build**. En moins de 60 secondes, votre Actor est compilé et prêt à tourner !
 
