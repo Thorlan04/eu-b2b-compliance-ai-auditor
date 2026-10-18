@@ -133,30 +133,38 @@
       },
       "display": {
         "component": "table",
-        "columns": {
+        "properties": {
           "domain": {
-            "label": "Domain"
+            "label": "Domain",
+            "format": "text"
           },
           "company_name": {
-            "label": "Company"
+            "label": "Company",
+            "format": "text"
           },
           "global_compliance_grade": {
-            "label": "Grade"
+            "label": "Grade",
+            "format": "text"
           },
           "rgpd_compliance_score": {
-            "label": "RGPD Score"
+            "label": "RGPD Score",
+            "format": "number"
           },
           "ai_search_readiness_score": {
-            "label": "AI Score"
+            "label": "AI Score",
+            "format": "number"
           },
           "siren": {
-            "label": "SIREN"
+            "label": "SIREN",
+            "format": "text"
           },
           "vat_number": {
-            "label": "TVA / VAT"
+            "label": "TVA / VAT",
+            "format": "text"
           },
           "public_emails": {
-            "label": "Emails"
+            "label": "Emails",
+            "format": "text"
           }
         }
       }
