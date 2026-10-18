@@ -1,0 +1,57 @@
+name: Weekly Compliance Signatures & Actor Auto-Updater
+
+on:
+  schedule:
+    # Exécution automatique chaque lundi à 04:00 UTC
+    - cron: '0 4 * * 1'
+  workflow_dispatch:
+    # Déclenchement manuel en un clic depuis l'interface GitHub Actions
+
+permissions:
+  contents: write
+
+jobs:
+  auto-update-and-rebuild:
+    name: Update Signatures, Run Health Checks and Push Rebuild
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Self-Updater Engine
+        run: |
+          python -m src.self_updater
+
+      - name: Run Test Suite & Compliance Health Checks
+        run: |
+          python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Commit and Push Updates to Main
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Vérification de modifications
+          if git diff --quiet data/ .actor/ src/ README.md; then
+            echo "Aucune modification de signature requise cette semaine."
+          else
+            git add data/compliance_signatures.json .actor/actor.json src/__init__.py src/main.py README.md
+            git commit -m "chore(auto-update): weekly compliance rules & AI crawlers update"
+            git push origin main
+            echo "Mise à jour poussée sur GitHub. Rebuild automatique déclenché sur Apify Store !"
+          fi

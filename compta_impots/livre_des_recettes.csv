@@ -1,0 +1,2 @@
+Date_Encaissement;Reference_Virement;Nom_Client;Pays_Client;Nature_Prestation;Mode_Reglement;Montant_Brut_EUR;Frais_Plateforme_EUR;Montant_Net_Encaisse_EUR
+2026-10-15;APIFY-PAYOUT-OCT26-01;Apify Inc. (Marketplace Store);USA;Redevances logicielles - Location Actor eu-b2b-compliance-ai-auditor;Virement bancaire SEPA;450.00;90.00;360.00

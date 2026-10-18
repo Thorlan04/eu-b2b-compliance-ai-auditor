@@ -1,0 +1,306 @@
+{
+  "version": "1.0.1",
+  "last_updated": "2026-10-18T07:20:19.801524+00:00",
+  "description": "Base de connaissances et signatures de conformité EU RGPD et AI-Search Readiness (llms.txt, robots.txt AI, trackers)",
+  "ai_crawlers": [
+    {
+      "name": "GPTBot",
+      "owner": "OpenAI",
+      "purpose": "Entraînement des modèles fondamentaux (GPT-4, GPT-5)",
+      "user_agents": [
+        "GPTBot"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "OAI-SearchBot",
+      "owner": "OpenAI",
+      "purpose": "Indexation pour ChatGPT Search / SearchGPT (moteur de recherche)",
+      "user_agents": [
+        "OAI-SearchBot"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "ChatGPT-User",
+      "owner": "OpenAI",
+      "purpose": "Navigation en temps réel déclenchée directement par un utilisateur ChatGPT",
+      "user_agents": [
+        "ChatGPT-User"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "ClaudeBot",
+      "owner": "Anthropic",
+      "purpose": "Collecte et entraînement des modèles Claude (Sonnet, Opus)",
+      "user_agents": [
+        "ClaudeBot"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "Claude-Web",
+      "owner": "Anthropic",
+      "purpose": "Navigation en direct effectuée par Claude pour répondre aux utilisateurs",
+      "user_agents": [
+        "Claude-Web"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "PerplexityBot",
+      "owner": "Perplexity AI",
+      "purpose": "Indexation et recherche conversationnelle Perplexity Search",
+      "user_agents": [
+        "PerplexityBot"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "Google-Extended",
+      "owner": "Google",
+      "purpose": "Contrôle des données utilisées pour entraîner Gemini et Vertex AI",
+      "user_agents": [
+        "Google-Extended"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "GoogleOther",
+      "owner": "Google",
+      "purpose": "Crawlers spécialisés R&D et IA de Google",
+      "user_agents": [
+        "GoogleOther",
+        "GoogleOther-Image",
+        "GoogleOther-Video"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "Applebot-Extended",
+      "owner": "Apple",
+      "purpose": "Entraînement pour Apple Intelligence et Siri GenAI",
+      "user_agents": [
+        "Applebot-Extended"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "Meta-ExternalAgent",
+      "owner": "Meta",
+      "purpose": "Crawler IA pour Meta AI et assistants Llama",
+      "user_agents": [
+        "Meta-ExternalAgent",
+        "Meta-ExternalFetcher"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "Bytespider",
+      "owner": "ByteDance",
+      "purpose": "Indexation et collecte IA pour TikTok et Doubao",
+      "user_agents": [
+        "Bytespider"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "cohere-ai",
+      "owner": "Cohere",
+      "purpose": "Entraînement de modèles d'embedding et LLMs entreprise Cohere",
+      "user_agents": [
+        "cohere-ai"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "Amazonbot",
+      "owner": "Amazon",
+      "purpose": "Collecte pour Alexa et Amazon Bedrock AI",
+      "user_agents": [
+        "Amazonbot"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "CCBot",
+      "owner": "Common Crawl",
+      "purpose": "Archive web publique massive utilisée pour pré-entraîner la plupart des LLMs",
+      "user_agents": [
+        "CCBot"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "DeepSeekBot",
+      "owner": "DeepSeek",
+      "purpose": "Entraînement et recherche DeepSeek LLM",
+      "user_agents": [
+        "DeepSeekBot"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "MistralBot",
+      "owner": "Mistral AI",
+      "purpose": "Indexation et entraînement des modèles européens Mistral",
+      "user_agents": [
+        "MistralBot"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "GrokBot",
+      "owner": "xAI",
+      "purpose": "Indexation en temps réel pour l'IA conversationnelle Grok",
+      "user_agents": [
+        "xAI-GrokBot",
+        "GrokBot"
+      ],
+      "recommended_action_for_visibility": "allow"
+    },
+    {
+      "name": "DuckAssistBot",
+      "owner": "DuckDuckGo",
+      "purpose": "Recherche augmentée par IA de DuckDuckGo",
+      "user_agents": [
+        "DuckAssistBot"
+      ],
+      "recommended_action_for_visibility": "allow"
+    }
+  ],
+  "gdpr_trackers": [
+    {
+      "id": "google_analytics",
+      "name": "Google Analytics / GA4",
+      "category": "Analytics",
+      "patterns": [
+        "google-analytics.com",
+        "googletagmanager.com/gtag/js",
+        "gtag(",
+        "_gaq.push",
+        "ga("
+      ]
+    },
+    {
+      "id": "facebook_pixel",
+      "name": "Meta Pixel (Facebook)",
+      "category": "Advertising",
+      "patterns": [
+        "connect.facebook.net",
+        "fbevents.js",
+        "fbq("
+      ]
+    },
+    {
+      "id": "hotjar",
+      "name": "Hotjar Behavioral Tracker",
+      "category": "Heatmaps & Recording",
+      "patterns": [
+        "static.hotjar.com",
+        "c.hotjar.com",
+        "_hjSettings"
+      ]
+    },
+    {
+      "id": "tiktok_pixel",
+      "name": "TikTok Pixel",
+      "category": "Advertising",
+      "patterns": [
+        "analytics.tiktok.com",
+        "ttq.load",
+        "ttq.page"
+      ]
+    },
+    {
+      "id": "linkedin_insight",
+      "name": "LinkedIn Insight Tag",
+      "category": "B2B Tracking",
+      "patterns": [
+        "snap.licdn.com/li.lms-analytics",
+        "_linkedin_partner_id"
+      ]
+    },
+    {
+      "id": "microsoft_clarity",
+      "name": "Microsoft Clarity",
+      "category": "Session Recording",
+      "patterns": [
+        "clarity.ms/tag",
+        "clarity("
+      ]
+    },
+    {
+      "id": "criteo",
+      "name": "Criteo Dynamic Retargeting",
+      "category": "Advertising",
+      "patterns": [
+        "static.criteo.net",
+        "criteo_q.push"
+      ]
+    },
+    {
+      "id": "twitter_pixel",
+      "name": "Twitter / X Pixel",
+      "category": "Advertising",
+      "patterns": [
+        "ads-twitter.com",
+        "twq("
+      ]
+    },
+    {
+      "id": "hubspot_analytics",
+      "name": "HubSpot Tracking Code",
+      "category": "Inbound Marketing & CRM",
+      "patterns": [
+        "js.hs-scripts.com",
+        "track.hubspot.com",
+        "_hsq.push"
+      ]
+    },
+    {
+      "id": "pinterest_tag",
+      "name": "Pinterest Tag",
+      "category": "Advertising",
+      "patterns": [
+        "ct.pinterest.com",
+        "pintrk("
+      ]
+    }
+  ],
+  "llms_txt_specs": {
+    "standard_path": "/llms.txt",
+    "full_path": "/llms-full.txt",
+    "format": "Markdown",
+    "required_sections": [
+      "H1 Title (# Domain or Company)",
+      "Blockquote summary (> Brief explanation for LLMs)",
+      "Navigation / Doc links with markdown lists"
+    ]
+  },
+  "legal_mandatory_fields_fr": [
+    "siren_or_siret",
+    "company_legal_name",
+    "registered_office_address",
+    "publication_director",
+    "web_host_identity_and_contact",
+    "vat_number_if_applicable"
+  ],
+  "scoring_weights": {
+    "rgpd": {
+      "has_legal_page": 25,
+      "has_siret_displayed": 25,
+      "has_vat_displayed": 15,
+      "has_host_information": 15,
+      "respects_cookie_consent_before_tracking": 20
+    },
+    "ai_search": {
+      "has_llms_txt": 30,
+      "has_llms_full_txt": 10,
+      "allows_search_ai_bots": 25,
+      "has_schema_org_jsonld": 20,
+      "has_api_or_openapi_spec": 15
+    }
+  }
+}

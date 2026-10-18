@@ -1,0 +1,83 @@
+{
+  "title": "EU B2B Compliance & AI-Search Auditor Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "targets": {
+      "title": "Targets (URLs, Domains, SIREN/SIRET numbers or Company Names)",
+      "type": "array",
+      "description": "Enter URLs (e.g., https://example.com), company domain names, SIREN/SIRET numbers, or legal corporate names. Test in 1 click with the pre-filled sample!",
+      "editor": "stringList",
+      "prefill": [
+        "https://www.doctolib.fr",
+        "794588818",
+        "Mirakl"
+      ],
+      "default": [
+        "https://www.doctolib.fr",
+        "794588818",
+        "Mirakl"
+      ]
+    },
+    "audit_depth": {
+      "title": "Audit Depth",
+      "type": "string",
+      "description": "Select the inspection level: Quick (Homepage & Robots), Deep (Homepage, Legal Pages, llms.txt, Well-Known & Registry), or Full Enterprise (Deep + AI-Action Plan generation).",
+      "default": "full_enterprise",
+      "editor": "select",
+      "enum": [
+        "quick",
+        "deep",
+        "full_enterprise"
+      ],
+      "enumTitles": [
+        "Quick (Fast scan, homepage & basic robots)",
+        "Deep (Comprehensive scan: legal pages, registry & llms.txt)",
+        "Full Enterprise (Complete audit + prioritized commercial action plan)"
+      ]
+    },
+    "verify_official_registry": {
+      "title": "Verify Official EU/French Registries",
+      "type": "boolean",
+      "description": "Query official open government registry (recherche-entreprises.api.gouv.fr) to verify SIREN, SIRET, NAF/APE code, VAT number, and legal executives.",
+      "default": true
+    },
+    "check_ai_readiness": {
+      "title": "Audit AI Search & LLM Engine Readiness (GEO)",
+      "type": "boolean",
+      "description": "Verify /llms.txt, /llms-full.txt, Schema.org JSON-LD, OpenAPI specs, and robots.txt rules for GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, etc.",
+      "default": true
+    },
+    "check_gdpr_legal": {
+      "title": "Audit GDPR & French Legal Notice Compliance",
+      "type": "boolean",
+      "description": "Verify mandatory legal notices (Mentions Légales, Host info, publication director, SIRET displayed) and detect third-party trackers.",
+      "default": true
+    },
+    "gemini_api_key": {
+      "title": "Google Gemini API Key (Optional Self-Healing Booster)",
+      "type": "string",
+      "description": "Optional Gemini API key for advanced self-healing on blocked/obfuscated web pages and personalized AI strategic audit synthesis. If omitted, built-in heuristic rules take over.",
+      "isSecret": true
+    },
+    "max_retries": {
+      "title": "Max Retries per Target",
+      "type": "integer",
+      "description": "Number of retries when encountering rate limits or slow responses.",
+      "default": 2,
+      "minimum": 1,
+      "maximum": 5
+    },
+    "timeout_per_target_seconds": {
+      "title": "Timeout per Target (seconds)",
+      "type": "integer",
+      "description": "Maximum seconds allowed per target scan before self-healing fallback concludes the report.",
+      "default": 30,
+      "minimum": 5,
+      "maximum": 120
+    }
+  },
+  "required": [
+    "targets"
+  ]
+}
