@@ -1,7 +1,7 @@
 # EU B2B Compliance & AI-Search Readiness Auditor 🚀
 
 [![Apify Actor](https://img.shields.io/badge/Apify-Actor-blue?logo=apify)](https://apify.com)
-[![Version](https://img.shields.io/badge/version-1.0.1-green.svg)](https://apify.com)
+[![Version](https://img.shields.io/badge/version-1.0.2-green.svg)](https://apify.com)
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB.svg?logo=python&logoColor=white)](https://python.org)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg?logo=docker&logoColor=white)](https://docker.com)
 [![Maintenance](https://img.shields.io/badge/Auto--Updated-Weekly-brightgreen.svg)]()
