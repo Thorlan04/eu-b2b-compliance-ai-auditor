@@ -3,7 +3,7 @@
   "name": "eu-b2b-compliance-ai-auditor",
   "title": "EU B2B Compliance & AI-Search Readiness Auditor (RGPD, SIRET, llms.txt, GEO)",
   "description": "Autonomous auditor for EU business compliance (SIREN/SIRET, Luhn, VAT calculation, GDPR legal notices) and AI-Search Engine Readiness (llms.txt, Schema.org, GPTBot/PerplexityBot directives, Tech Stack, Lead enrichment).",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "meta": {
     "templateId": "python-empty"
   },
