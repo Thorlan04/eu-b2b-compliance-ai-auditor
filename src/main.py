@@ -23,7 +23,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("EUComplianceAuditorActor")
 
-CURRENT_VERSION = "1.0.6"
+CURRENT_VERSION = "1.0.7"
 
 
 async def process_single_target(

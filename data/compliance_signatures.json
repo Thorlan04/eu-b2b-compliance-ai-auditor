@@ -1,6 +1,6 @@
 {
-  "version": "1.0.6",
-  "last_updated": "2026-11-16T12:23:01.003359+00:00",
+  "version": "1.0.7",
+  "last_updated": "2026-11-23T13:57:58.233633+00:00",
   "description": "Base de connaissances et signatures de conformité EU RGPD et AI-Search Readiness (llms.txt, robots.txt AI, trackers)",
   "ai_crawlers": [
     {
